@@ -114,10 +114,11 @@ describe './lib/turn.rb' do
 
       turn(board)
     end
+require "pry"
 
     it 'asks for input again after a failed validation' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-
+binding.pry
       allow($stdout).to receive(:puts)
 
       expect(self).to receive(:gets).and_return("invalid")
